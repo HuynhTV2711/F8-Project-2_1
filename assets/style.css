@@ -41,6 +41,18 @@ a {
 
 /* header */
 
+.header .body .bars {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .header .body .navbar,
+  .header .body .action {
+    display: none;
+  }
+  .header .body .bars {
+    display: block;
+  }
+}
 .header .body {
   display: flex;
   justify-content: space-between;
@@ -60,6 +72,10 @@ a {
   font-size: 1.6rem;
   line-height: 1.5;
   color: #2f3a3b;
+}
+.header .navbar a:hover,
+.header .action .action-link:hover {
+  color: #070707;
 }
 
 .header .action .action-link {
@@ -150,6 +166,9 @@ a {
   box-shadow: 0px 22px 50px rgba(0, 0, 0, 0.05);
   align-items: center;
   justify-content: center;
+}
+.hero .cta-group .play:hover {
+  border: 1px solid var(--primary-color);
 }
 
 .hero .media-block .image {
@@ -388,6 +407,7 @@ a {
   height: 393px;
   object-fit: cover;
 }
+
 .course .courses-block .courses-item {
   position: relative;
 }
@@ -400,6 +420,11 @@ a {
   background: var(--secondary-color);
   box-shadow: 0px 16px 90px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
+}
+.course .courses-block .courses-sumary:hover,
+.course .courses-block .thumb:hover {
+  cursor: pointer;
+  box-shadow: 0px 16px 90px rgba(0, 0, 0, 0.1);
 }
 
 .courses-sumary .title {
@@ -630,11 +655,15 @@ footer .heading {
   margin-bottom: 26px;
 }
 footer .list a {
+  display: inline-block;
   font-size: 1.6rem;
   line-height: 1.5;
   /* identical to box height */
   color: #535353;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+}
+footer .list a:hover {
+  color: #070707;
 }
 footer .list .socials {
   width: 13px;
